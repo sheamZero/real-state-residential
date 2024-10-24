@@ -1,0 +1,75 @@
+[
+    {
+      "id": "1",
+      "estate_title": "Apartment",
+      "segment_name": "Residential",
+      "description": "An exquisite penthouse located in the heart of the city with top-notch amenities and breathtaking located in the heart of the city with top-notch amenities and breathtaking city views.",
+      "price": "$1,200,000",
+      "status": "sale",
+      "area": "3200 sqft",
+      "location": "789 Skyline Ave, Downtown",
+      "facilities": ["Living room", "Swimming pool", "Kitchen", "Home theater", "Private elevator"],
+      "image": "https://i.ibb.co.com/d2Ss3RG/apartment.jpg"
+    },
+    {
+      "id": "2",
+      "estate_title": "Senior Living Room",
+      "segment_name": "Residential",
+      "description": "A charming 3-bedroom home in a peaceful suburb, ideal for family 3-bedroom home in a peaceful suburb, ideal for family living.A charming 3-bedroom home in a peaceful suburb, ideal for family living.",
+      "price": "$420,000",
+      "status": "sale",
+      "area": "2000 sqft",
+      "location": "145 Oak Lane, Springfield",
+      "facilities": ["Living room", "Kitchen", "Garden", "Garage", "Playroom"],
+      "image": "https://i.ibb.co.com/p2P4nRf/seniorliving.webp"
+    },
+    {
+      "id": "3",
+      "estate_title": "Single-family homes",
+      "segment_name": "Residential",
+      "description": "A luxurious villa right by the beach, featuring stunning ocean views and modern design.right by the beach, featuring stunning ocean views and modern design.ocean views and modern design.",
+      "price": "$950,000",
+      "status": "sale",
+      "area": "2800 sqft",
+      "location": "22 Oceanview Drive, Seaside Town",
+      "facilities": ["Living room", "Swimming pool", "Kitchen", "Terrace", "Private beach access"],
+      "image": "https://i.ibb.co.com/z2q2HqQ/single.jpg"
+    },
+    {
+      "id": "4",
+      "estate_title": "Student Housing",
+      "segment_name": "Residential",
+      "description": "A sleek and modern apartment in the city center with convenient access to shops andd modern apartment in the city center with convenient access to shops and restaurants.",
+      "price": "$600,000",
+      "status": "rent",
+      "area": "1200 sqft",
+      "location": "33 Park Ave, Downtown",
+      "facilities": ["Living room", "Gym", "Kitchen", "Balcony", "Rooftop garden"],
+      "image": "https://i.ibb.co.com/m8v50V3/student.jpg"
+    },
+    {
+      "id": "5",
+      "estate_title": "Townhouses",
+      "segment_name": "Residential",
+      "description": "A cozy cottage in a quiet rural area, perfect for a weekend getaway or remote living.",
+      "price": "$350,000",
+      "status": "sale",
+      "area": "1800 sqft",
+      "location": "88 Country Road, Willow Creek",
+      "facilities": ["Living room", "Fireplace", "Kitchen", "Garden", "Porch"],
+      "image": "https://i.ibb.co.com/9t5Ccgm/townhouses.jpg"
+    },
+    {
+      "id": "6",
+      "estate_title": "Vacation Rentals",
+      "segment_name": "Residential",
+      "description": "A contemporary townhouse located in an upscale neighborhood, featuring all the modern conveniences.",
+      "price": "$750,000",
+      "status": "rent",
+      "area": "2200 sqft",
+      "location": "17 Elm Street, Uptown",
+      "facilities": ["Living room", "Swimming pool", "Kitchen", "Rooftop deck", "Garage"],
+      "image": "https://i.ibb.co.com/QJTNnsz/vacation.jpg"
+    }
+  ]
+  
