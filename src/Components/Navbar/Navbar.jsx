@@ -1,14 +1,11 @@
-import React from 'react';
+
 import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const navLinks = <>
-        <li><NavLink to={"/"}>Home</NavLink></li>
-        <li><NavLink to={"/update"}>Update Profile</NavLink></li>
-    </>
+
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 my-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,20 +24,27 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        {navLinks}
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow  text-lg font-semibold">
+                        <li><NavLink to={"/"}>Home</NavLink></li>
+                        <li><NavLink to={"/update"}>Update Profile</NavLink></li>
+                        <li><NavLink to={"/profile"}>Profile</NavLink></li>
                     </ul>
                 </div>
                 {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
-                <Link to={"/"}>EstateFind</Link>
+                <Link className='text-2xl font-semibold text-primary btn' to={"/"}>
+                    Estate
+                    <span className='text-black font-bold text-3xl'>Trace</span>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    {navLinks}
+                <ul className="menu menu-horizontal px-1 text-lg font-semibold">
+                    <li><NavLink to={"/"}>Home</NavLink></li>
+                    <li><NavLink to={"/update"}>Update Profile</NavLink></li>
+                    <li><NavLink to={"/profile"}>Profile</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Login</a>
+                <Link to={"/login"} className="btn text-lg font-medium">Login</Link>
             </div>
         </div>
     );

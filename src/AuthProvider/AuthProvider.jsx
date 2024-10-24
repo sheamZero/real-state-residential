@@ -3,6 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
+    // load data 
     const [data, setData] = useState([]);
     useEffect(() => {
         fetch("/data.json")
@@ -10,6 +11,7 @@ const AuthProvider = ({ children }) => {
             .then(result => setData(result))
     }, [])
 
+    
 
 
 
