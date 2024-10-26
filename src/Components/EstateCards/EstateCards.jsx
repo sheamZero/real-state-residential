@@ -5,7 +5,7 @@ import { GrLocation } from "react-icons/gr";
 
 const EstateCards = ({ currentData }) => {
     // console.log(currentData);
-    const { image, estate_title, status, area, price, facilities, location } = currentData;
+    const { image, estate_title, status, area, price, facilities, location ,id} = currentData;
 
     return (
         <div className="card bg-base-100 p-4 shadow">
@@ -38,7 +38,7 @@ const EstateCards = ({ currentData }) => {
 
 
                 <div className="card-actions justify-center my-5">
-                    <Link to={"/cardDetails"} className='btn px-5 py-2 font-semibold text-xl btn-primary w-full'>View Details</Link>
+                    <Link to={`cardDetails/${id}`} className='btn px-5 py-2 font-semibold text-xl btn-primary w-full'>View Details</Link>
                 </div>
             </div>
         </div>

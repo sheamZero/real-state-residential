@@ -5,6 +5,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import CardDetails from "../Pages/CardDetails/CardDetails";
 
 
 
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>
+            },
+            {
+                path: "cardDetails/:id",
+                element: <CardDetails></CardDetails>
             },
            
             {

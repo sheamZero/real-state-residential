@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [showPass, setShowPass] = useState(false);
-    const { loginUser } = useAuth();
+    const { loginUser, googleLogin, gitHubLogin } = useAuth();
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {
@@ -19,6 +19,21 @@ const Login = () => {
 
         // call the signInWithEmailAndPassword method
         loginUser(email, password)
+            .then(res => toast("User Login Succesfully!"))
+            .catch(err => toast(err.message))
+
+    }
+
+    // google signin
+    const handleGoogleSignIn = () => {
+        googleLogin()
+            .then(res => toast("User Login Succesfully!"))
+            .catch(err => toast(err.message))
+    }
+
+    // gitHub SignIn
+    const handleGithubSignIn = () => {
+        gitHubLogin()
             .then(res => toast("User Login Succesfully!"))
             .catch(err => toast(err.message))
 
@@ -81,10 +96,10 @@ const Login = () => {
                 <div className="p-8">
                     <h3 className="text-center text-xl font-semibold border-t pt-5">Login With Social Media</h3>
                     <div className="flex items-center justify-center gap-10 text-5xl border-b pb-5 my-5">
-                        <Link>
+                        <Link onClick={handleGoogleSignIn}>
                             <FcGoogle></FcGoogle>
                         </Link>
-                        <Link>
+                        <Link onClick={handleGithubSignIn}>
                             <FaGithub></FaGithub>
                         </Link>
                     </div>
