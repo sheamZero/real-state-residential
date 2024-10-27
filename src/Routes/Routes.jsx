@@ -6,6 +6,8 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import CardDetails from "../Pages/CardDetails/CardDetails";
+import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 
 
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "cardDetails/:id",
-                element: <CardDetails></CardDetails>
+                element: <PrivateRoutes><CardDetails></CardDetails></PrivateRoutes>
             },
            
             {
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <ContactUs></ContactUs>
+            },
+            {
+                path: "/update",
+                element: <UpdateProfile></UpdateProfile>
             }
         ]
     }

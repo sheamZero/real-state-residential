@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,13 +13,19 @@ const Login = () => {
     const [showPass, setShowPass] = useState(false);
     const { loginUser, googleLogin, gitHubLogin } = useAuth();
     const { register, handleSubmit } = useForm();
+    const location = useLocation();
+    console.log(location);
+    const navigate = useNavigate();
 
     const onSubmit = (data) => {
         const { email, password } = data;
 
         // call the signInWithEmailAndPassword method
         loginUser(email, password)
-            .then(res => toast("User Login Succesfully!"))
+            .then(res => {
+                navigate(location.state);
+                toast("User Login Succesfully!");
+            })
             .catch(err => toast(err.message))
 
     }
@@ -27,14 +33,20 @@ const Login = () => {
     // google signin
     const handleGoogleSignIn = () => {
         googleLogin()
-            .then(res => toast("User Login Succesfully!"))
+            .then(res => {
+                navigate(location.state);
+                toast("User Login Succesfully!");
+            })
             .catch(err => toast(err.message))
     }
 
     // gitHub SignIn
     const handleGithubSignIn = () => {
         gitHubLogin()
-            .then(res => toast("User Login Succesfully!"))
+            .then(res => {
+                navigate(location.state);
+                toast("User Login Succesfully!")
+            })
             .catch(err => toast(err.message))
 
     }
@@ -47,7 +59,7 @@ const Login = () => {
 
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body w-full">
                     <h2 className="text-center text-3xl font-extrabold">
-                        <span className="border-b-2 border-black">Register</span>
+                        <span className="border-b-2 border-black">Login</span>
                     </h2>
 
                     {/* -----email------ */}
