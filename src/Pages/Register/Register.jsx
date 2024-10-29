@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useAuth from "../../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 
 const Register = () => {
@@ -38,6 +39,9 @@ const Register = () => {
 
     return (
         <div className="my-20">
+            <Helmet>
+                <title>EstateTrace | Register</title>
+            </Helmet>
             <div className="card bg-base-100 max-w-md shrink-0 shadow mx-auto">
 
 

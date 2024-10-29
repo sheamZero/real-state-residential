@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 
 
@@ -55,6 +56,9 @@ const Login = () => {
     return (
 
         <div className="my-20">
+            <Helmet>
+                <title>Estate | Login</title>
+            </Helmet>
             <div className="card bg-base-100 max-w-md shrink-0 shadow mx-auto">
 
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body w-full">
@@ -103,7 +107,7 @@ const Login = () => {
                     </div>
                 </form>
                 {/* toastify */}
-                <ToastContainer></ToastContainer>
+                <ToastContainer position="top-center" autoClose={3000}></ToastContainer>
                 {/* social login */}
                 <div className="p-8">
                     <h3 className="text-center text-xl font-semibold border-t pt-5">Login With Social Media</h3>

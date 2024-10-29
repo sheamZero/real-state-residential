@@ -4,7 +4,7 @@ import useAuth from '../../Hooks/useAuth';
 
 const Navbar = () => {
     const { user } = useAuth();
-    
+
 
     return (
         <div className="navbar bg-base-100 my-4">
@@ -29,7 +29,9 @@ const Navbar = () => {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow  text-lg font-semibold">
                         <li><NavLink to={"/"}>Home</NavLink></li>
                         <li><NavLink to={"/contact"}>Contact Us</NavLink></li>
-                        <li><NavLink to={"/update"}>Update Profile</NavLink></li>
+                        {
+                            user && <li><NavLink to={"/update"}>Update Profile</NavLink></li>
+                        }
 
                     </ul>
                 </div>
@@ -43,7 +45,9 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 text-lg font-semibold">
                     <li><NavLink to={"/"}>Home</NavLink></li>
                     <li><NavLink to={"/contact"}>Contact Us</NavLink></li>
-                    <li><NavLink to={"/update"}>Update Profile</NavLink></li>
+                    {
+                        user && <li><NavLink to={"/update"}>Update Profile</NavLink></li>
+                    }
 
                 </ul>
             </div>

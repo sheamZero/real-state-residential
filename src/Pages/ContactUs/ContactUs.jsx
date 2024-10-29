@@ -3,11 +3,15 @@ import { CgMailOpen } from "react-icons/cg";
 import contactBanner from "../../assets/contactBanner.jpg"
 import { Link } from "react-router-dom";
 import ContactUsForm from "../../Components/ContactUsForm/ContactUsForm";
+import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
     return (
         <div>
             <div className="relative">
+                <Helmet>
+                    <title>EstateTrace | Contact</title>
+                </Helmet>
                 <div className="mt-20 mb-16">
                     <img className="mt-20 mb-16 w-full h-[70vh]" src={contactBanner} alt="" />
                 </div>

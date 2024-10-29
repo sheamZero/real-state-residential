@@ -2,6 +2,7 @@ import Banner from "../../Components/Banner/Banner";
 import { useEffect, useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
 import EstateCards from "../../Components/EstateCards/EstateCards";
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
@@ -10,6 +11,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>EstateTrace</title>
+            </Helmet>
             <Banner data={data} key={data.id}></Banner>
             <div className="my-16">
                 <h2 className="text-center font-extrabold text-5xl">Expolre More</h2>

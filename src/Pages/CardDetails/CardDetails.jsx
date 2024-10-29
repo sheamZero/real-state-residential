@@ -2,6 +2,7 @@
 import { Link, useParams } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import { GrLocation } from 'react-icons/gr';
+import { Helmet } from 'react-helmet';
 
 const CardDetails = () => {
     const { data } = useAuth();
@@ -14,6 +15,9 @@ const CardDetails = () => {
     return (
 
         <div className="card bg-base-100 p-4 my-10 shadow">
+            <Helmet>
+                <title>EstateTrace | Card Details</title>
+            </Helmet>
 
             <div className='relative'>
                 <h2 className="text-5xl text-center my-5 font-bold">{estate_title}</h2>
