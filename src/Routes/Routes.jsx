@@ -8,6 +8,7 @@ import ContactUs from "../Pages/ContactUs/ContactUs";
 import CardDetails from "../Pages/CardDetails/CardDetails";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
@@ -35,7 +37,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/contact",
-                element: <ContactUs></ContactUs>
+                element: <PrivateRoutes><ContactUs></ContactUs></PrivateRoutes>
             },
             {
                 path: "/update",
