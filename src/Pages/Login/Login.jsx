@@ -15,7 +15,7 @@ const Login = () => {
     const { loginUser, googleLogin, gitHubLogin } = useAuth();
     const { register, handleSubmit } = useForm();
     const location = useLocation();
-    console.log(location);
+
     const navigate = useNavigate();
 
     const onSubmit = (data) => {

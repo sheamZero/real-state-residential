@@ -13,9 +13,9 @@ const Register = () => {
     const { register, handleSubmit } = useForm();
     const {createUser} = useAuth();
 
+
     const onSubmit = (data) => {
         const { name, email, password } = data;
-        console.log(name, email, password,);
 
         // validation
         // setError("");
