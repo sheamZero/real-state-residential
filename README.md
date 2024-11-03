@@ -4,15 +4,24 @@
 
 [Click here to visit the live site](https://real-state-residential.web.app/)
 
-##Features
+## Features & Characteristics
 
-**Secure Authentication System**
+1. **Secure Authentication System**
 
-**Dynamic Estate Listings**
+2. **Dynamic Estate Listings**
 
-**User Profile Management**
+3. **User Profile Management**
 
-**Contact Us Page**
+4. **Contact Us Page**
 
-**Responsive & Modern Design**
+5. **Responsive & Modern Design**
+
+## NPM Package 
+
+1. **React Hook Form**
+
+2. **Swiper Slider**
+
+3. **Animate.css**
+
 
